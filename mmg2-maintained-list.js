@@ -95,6 +95,14 @@ const
 			    labels:  labels
 			};
 		}
+
+		if (formatID === 4) {
+			return data.map((x) => {
+				let obj = {};
+				obj[x.locationName] = x.locationID;
+				return obj;
+			});
+		}
 	};
 
 module.exports = function(RED) {
