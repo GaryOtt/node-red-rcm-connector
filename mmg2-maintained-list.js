@@ -97,11 +97,13 @@ const
 		}
 
 		if (formatID === 4) {
-			return data.map((x) => {
-				let obj = {};
-				obj[x.locationName] = x.locationID;
-				return obj;
-			});
+			return {
+				options: data.map((x) => {
+					let obj = {};
+					obj[x.locationName] = x.locationID;
+					return obj;
+				})
+			};
 		}
 	};
 
